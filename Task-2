@@ -1,0 +1,471 @@
+<!-- Task-2[FRESH RESPONSIVE WEBSITE] -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Responsive Website</title>
+    <link rel="icon" href="https://images.unsplash.com/photo-1635756837851-d3b6edbaa11c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9nb3N8ZW58MHx8MHx8fDA%3D" alt="logo" width="50px" height="60px" style="border-radius:50%;">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        body {
+            background-color: rgb(198, 244, 222);
+        }
+        /* styling navbar */
+        nav {
+            background: linear-gradient(to bottom right, rgb(246, 120, 214), rgb(177, 219, 230), rgb(239, 100, 124));
+            position: sticky;
+            top: 0px;
+            width: 100vw;
+            padding: 10px;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        /* anchor tag styling */
+        a {
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: rgb(251, 39, 71);
+            background-color: rgb(38, 204, 237);
+        }
+        /* styling work with me button */
+        
+        button {
+            background-color: rgb(72, 72, 249);
+            border: 2px solid rgb(15, 114, 243);
+            box-shadow: 5px 4px 2px rgb(19, 148, 223);
+            padding: 10px;
+        }
+        /* styling landingpage with background-image */
+        .landingpage {
+            height: 100vh;
+            width: 100vw;
+            background: url(https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .intro {
+            font-size: 3em;
+            color: aliceblue;
+        }
+        
+        .para {
+            font-size: 3em;
+            color: rgb(234, 227, 227);
+        }
+        /* intro of the author */
+        .myself {
+            background-color: rgb(215 220 197);
+            color: rgb(2, 11, 20);
+            width: 400px;
+            border-radius: 4px;
+            position: absolute;
+            top: 88%;
+            height: 148px;
+            box-sizing: border-box;
+            box-shadow: 4px 4px 2px grey;
+        }
+        
+        .about {
+            padding: 10px;
+            background-color: rgb(126, 227, 234);
+            width: 100vw;
+            text-align: justify;
+            overflow: hidden;
+            height: auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .about img {
+            border-radius: 50%;
+            float: right;
+        }
+        
+        .about img:hover {
+            transform: scale(1.2);
+        }
+        
+        .about .text {
+            width: 65%;
+            float: left;
+        }
+        footer {
+            margin-top: 0px;
+            background: linear-gradient(to bottom right, rgb(246, 120, 214), rgb(177, 219, 230), rgb(239, 100, 124));
+            position: sticky;
+            bottom: 0px;
+            width: 100vw;
+            padding: 10px;
+            clear: both;
+        }
+        
+        footer ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        /* services provided */
+        .services,
+        .head {
+            padding: 10px;
+            background-color: rgb(198, 250, 254);
+            width: 100vw;
+            text-align: justify;
+            overflow: hidden;
+            height: auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .services img {
+            border-radius: 10%;
+            float: right;
+            width: 20%;
+        }
+        
+        .services img:hover {
+            transform: scale(1.2);
+        }
+        
+        .services .t1 {
+            width: 60%;
+            float: left;
+        }
+        
+        .services2,
+        .head {
+            padding: 10px;
+            background-color: rgb(198, 250, 254);
+            width: 100vw;
+            text-align: justify;
+            overflow: hidden;
+            height: auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .services2 img {
+            border-radius: 10%;
+            float: left;
+            width: 20%;
+        }
+        
+        .services2 img:hover {
+            transform: scale(1.2);
+        }
+        
+        .services2 .t1 {
+            width: 60%;
+            float: right;
+            order: 2;
+        }
+        
+        button:hover {
+            transform: scale(1.1);
+        }
+        /* articles related */
+        .container {
+            padding: 10px;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2px;
+            background-color: rgb(126, 227, 234);
+            overflow: hidden;
+        }
+        
+        .box1,
+        .box4 {
+            background-color: rgb(177, 217, 240);
+            box-shadow: 2px 2px 5px rgb(255, 77, 0);
+            line-height: 30px;
+            text-align: center;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        
+        .box2,
+        .box3 {
+            background-color: white;
+            box-shadow: 2px 2px 5px rgb(228, 233, 139);
+            line-height: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 50vh;
+        }
+        /* source for the web development */
+        .source,
+        .help {
+            background-color: rgb(198, 250, 254);
+            width: 100vw;
+            padding: 10px;
+            height: 50vh;
+        }
+        
+        .source {
+            display: flex;
+            width: 100vw;
+            padding: 10px;
+            justify-content: space-evenly;
+            overflow: hidden;
+        }
+        
+        .source1,
+        .source2,
+        .source3 {
+            display: none;
+        }
+        
+        .source1,
+        .source2,
+        .source3 {
+            width: 30%;
+            border: 2px solid rgb(0, 187, 255);
+            border-radius: 4px;
+            box-shadow: 2px 2px 2px 2px rgb(16, 65, 244);
+            line-height: 2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 2px;
+            text-align: center;
+        }
+        .source1:hover,.source2:hover,.source3:hover{
+          transform:scale(1.04);
+          box-shadow:2px 4px 4px 4px rgb(16,65,244);
+        }
+        .b2 {
+            width: 20%;
+            position: absolute;
+            right: 2px;
+        }
+        /* help required for developing the application */
+        .help {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        /* icon to swap */
+        .tag {
+            text-align: start;
+            font-size: 2em;
+        }
+        /* dots styling */
+        .dots-container{
+            width:100vw;
+            text-align: center;
+            padding:10px;
+            background-color:rgb(198, 250, 254);
+            display:flex;
+            justify-content: center;
+            
+        }
+        #dot1,#dot2,#dot3{
+        margin:10px;
+            border:2px solid blue;
+            width:10px;
+            height:10px;
+            border-radius:50%;
+        }
+        
+    </style>
+    <script>
+        // js code to make the source box's backgroundcolor change when we move our mouse over the respective dot and return to its original backgroundcolor when we move our mouse out of that dot 
+        function box1(){
+            document.getElementById("s1").style.backgroundColor="rgb(149,221,226)";
+            document.getElementById("dot1").style.backgroundColor="black";
+            document.getElementById("s1").style.transform="scale(1.05)";
+            
+        }
+        function box2(){
+            document.getElementById("s2").style.backgroundColor="rgb(149,221,226)";
+            document.getElementById("dot2").style.backgroundColor="black";
+            document.getElementById("s2").style.transform="scale(1.05)";
+            
+        }
+        function box3(){
+            document.getElementById("s3").style.backgroundColor="rgb(149,221,226)";
+            document.getElementById("dot3").style.backgroundColor="black";
+            document.getElementById("s3").style.transform="scale(1.05)";
+            
+        }
+        function n1box(){
+            document.getElementById("s1").style.backgroundColor="rgb(198, 250, 254)";
+            document.getElementById("dot1").style.backgroundColor="rgb(198, 250, 254)";
+            document.getElementById("s1").style.transform="scale(1)";
+            
+
+        }
+        function n2box(){
+            document.getElementById("s2").style.backgroundColor="rgb(198, 250, 254)";
+            document.getElementById("dot2").style.backgroundColor="rgb(198, 250, 254)";
+            document.getElementById("s2").style.transform="scale(1)";
+            
+
+        }
+        function n3box(){
+            document.getElementById("s3").style.backgroundColor="rgb(198, 250, 254)";
+            document.getElementById("dot3").style.backgroundColor="rgb(198, 250, 254)";
+            document.getElementById("s3").style.transform="scale(1)";
+            
+
+        }
+</script>
+   
+</head>
+
+<body>
+    <section>
+        <!-- creating navbar -->
+        <nav>
+            <ul type="none">
+                <li><a href="#">START</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">OPEN SOURCE</a></li>
+            </ul>
+        </nav>
+        <!-- creating landingpage for the website -->
+        <div class="landingpage">
+            <div class="intro"><b>Hey,I'm Charles</b></div>
+            <p class="para"> I help <ins>start-ups</ins>.developing outstanding web products.</p><br>
+            <button class="work">&rarr; WORK WITH ME</button><br>
+            <div class="myself">
+                <p>&lt;?php<br> final class Charles<br>{<br> private $name='Charles Van der Hejden';<br> private $age=48;<br> private $location='Maastricht,Netherlands';<br> private $email='hi@vonderhejden.com';<br>}
+                </p>
+            </div>
+    </section>
+    <!-- introduction of author  -->
+    <section>
+        <div class="about">
+            <div class="text">
+                <h1 style="color: blue;">ABOUT ME</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum officia accusamus magni velit. Animi nihil illo quo quis esse in sunt iusto. Quo harum quia eum sed. Unde qui dolorum nesciunt consequuntur, repellat ratione exercitationem hic
+                    culpa dolores laboriosam recusandae.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos provident cumque tempora voluptates eos. Tempora provident, totam ipsam modi officia quidem sint quisquam! Architecto natus iusto repudiandae, veritatis vel reiciendis
+                    sapiente porro aut vero ipsum illo aliquid molestias alias labore tempore ipsam blanditiis cum a incidunt saepe? Eum ea perspiciatis commodi veritatis similique amet aperiam tenetur sapiente voluptas nam dolore, neque voluptate aliquam.
+                    Modi, quos.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus dignissimos ex modi. Molestias quidem dignissimos vel quo reiciendis, non dolorem.</p>
+            </div>
+            <div class="img"><img src="https://th.bing.com/th/id/OIP.LM-HqDbbiWQKV7DZF7DuOgAAAA?w=120&h=179&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="not loading"></div>
+        </div>
+    </section>
+    <!-- services of the website -->
+    <section>
+        <h1 style="color: blue;text-align: center;" class="head">SERVICES</h1>
+        <div class="services">
+            <div class="t1">
+                <h2>Backend Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit non quibusdam quod. Cumque animi odit dolorem architecto inventore natus sequi atque, maiores fuga neque consectetur tempore vero ad consequatur exercitationem est molestias
+                    fugiat quis in temporibus aliquam sint optio? Vitae.</p><br>
+                <button class="work">&rarr; WORK WITH ME</button>
+            </div>
+            <img src="https://plus.unsplash.com/premium_vector-1733815291448-7350647cea29?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2VuZHxlbnwwfHwwfHx8MA%3D%3D" alt="not loading">
+        </div>
+    </section>
+    <section>
+        <div class="services2">
+            <div class="t1">
+                <h2>Frontend Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit non quibusdam quod. Cumque animi odit dolorem architecto inventore natus sequi atque, maiores fuga neque consectetur tempore vero ad consequatur exercitationem est molestias
+                    fugiat quis in temporibus aliquam sint optio? Vitae.</p><br>
+                <button class="work">&rarr; WORK WITH ME</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1592289701772-4a4a8949f8ba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZyb250ZW5kfGVufDB8fDB8fHww" alt="not loading">
+        </div>
+    </section>
+    <!-- articles reference page -->
+    <section>
+        <div class="container">
+            <div class="box1">
+                <h2>Building a blog with Jekyll,Docker and GitLab</h2>
+                <p>May 22,2015-2 minute read</p>
+                <p>Developing a Jekyll blog with Docker deployed to GitLab pages</p>
+                <a href="#">&rarr;READ ARTICLE</a></div>
+            <div class="box2">
+                <h2>Business-A PHP library for business date calculations</h2>
+                <p>May 22,2015-2 minute read</p>
+                <p>Discovering Buisiness-a PHP library to ease dealing with business date calculations</p>
+                <a href="#">&rarr;READ ARTICLE</a></div>
+            <div class="box3">
+                <h2>Data tables with Symfony,Hateoas and AngularJS</h2>
+                <p>May 22,2015-2 minute read</p>
+                <p>Building a simple Angular table consuming a Hateoas REST APP</p>
+                <a href="#">&rarr;READ ARTICLE</a></div>
+            <div class="box4">
+                <h2>Swap-A PHP exchange rates library</h2>
+                <p>May 22,2015-2 minute read</p>
+                <p>Discovering Swap,an exchange rates library for PHP</p>
+                <a href="#">&rarr;READ ARTICLE</a></div>
+        </div>
+    </section>
+    <!-- sources for web development -->
+    <section>
+        <h1 style="text-align: center;color:blue;background-color: rgb(198, 250, 254);width:100vw;padding:10px;">OPEN SOURCE</h1>
+        <div class="source">
+            <div class="source1" id="s1"><b class="tag">&lt;/&gt;</b>
+                <h1>Swap</h1>
+                <p>Currency exchange rates library for PHP</p>
+                <p>&#9733;645&nbsp;&nbsp; &#10021;324</p>
+            </div>
+            <div class="source2" id="s2"><b class="tag">&lt;/&gt;</b>
+                <h1>Swap</h1>
+                <p>Currency exchange rates library for PHP</p>
+                <p>&#9733;645&nbsp;&nbsp; &#10021;324</p>
+            </div>
+            <div class="source3" id="s3"><b class="tag">&lt;/&gt;</b>
+                <h1>Swap</h1>
+                <p>Currency exchange rates library for PHP</p>
+                <p>&#9733;645&nbsp;&nbsp; &#10021;324</p>
+            </div>
+        </div>
+        <div class="dots-container">
+            <div id="dot1" onmouseover="box1()" onmouseout="n1box()"></div>
+            <div id="dot2" onmouseover="box2()" onmouseout="n2box()"></div>
+            <div id="dot3" onmouseover="box3()" onmouseout="n3box()"></div>
+        </div>
+
+<!-- help to develop application -->
+        <div class="help">
+            <h2 style="color:blue;">Need help developing your application?</h2>
+            <h3>Let's get in touch!</h3>
+            <button class="b2">&rarr;WORK WITH ME</button>
+        </div>
+    </section>
+    <!-- the footer for social media interaction -->
+    <footer>
+        <ul type="none">
+            <li><a href="#">GITHUB</a></li>
+            <li><a href="#">LINKEDIN</a></li>
+            <li><a href="#">TWITTER</a></li>
+            <li><b>Charles Van der Hejden<br>&copy;2018-All rights reserved</b></li>
+            <li><img src="https://images.unsplash.com/photo-1635756837851-d3b6edbaa11c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9nb3N8ZW58MHx8MHx8fDA%3D" alt="logo" width="50px" height="60px" style="border-radius:50%;"></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
